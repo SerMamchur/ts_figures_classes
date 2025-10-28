@@ -23,7 +23,9 @@ export class Triangle implements Figure {
     const sumOfTheOtherTwo = a + b + c - longestSide;
 
     if (longestSide >= sumOfTheOtherTwo || Math.min(a, b, c) <= 0) {
-      throw new Error('longestSide has to be lower than sumOfTheOtherTwo');
+      throw new Error(
+        'longestSide has to be lower than sumOfTheOtherTwo or one side is <= 0',
+      );
     }
   }
 
